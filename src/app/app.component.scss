@@ -1,0 +1,17 @@
+.drawer {
+  width: 70vw;
+}
+
+a {
+  border-radius: 10px;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgba(30, 51, 90, 0.2);
+    cursor: pointer;
+  }
+}
+
+.active-option {
+  border-bottom: 2px solid #334d6e;
+  transition: 0.3s;
+}

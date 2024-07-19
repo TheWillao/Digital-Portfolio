@@ -1,0 +1,42 @@
+export const myProjects = [
+  {
+    projectTitle: 'Pokédex',
+    projectImg: '/assets/img/pokedex.png',
+    techStack: 'Angular',
+    projectDate: '11/2023',
+    gitHubHref: 'https://www.google.com',
+    projectHref: 'https://www.google.com',
+  },
+  {
+    projectTitle: 'ViaCEP',
+    projectImg: '/assets/img/pokedex.png',
+    techStack: 'Angular',
+    projectDate: '11/2023',
+    gitHubHref: 'https://www.google.com',
+    projectHref: 'https://www.google.com',
+  },
+  {
+    projectTitle: 'Comments Section',
+    projectImg: '/assets/img/pokedex.png',
+    techStack: 'ReactJS',
+    projectDate: '05/2024',
+    gitHubHref: 'https://www.google.com',
+    projectHref: 'https://www.google.com',
+  },
+  {
+    projectTitle: 'Games Library',
+    projectImg: '/assets/img/pokedex.png',
+    techStack: 'ReactJS',
+    projectDate: '05/2024',
+    gitHubHref: 'https://www.google.com',
+    projectHref: 'https://www.google.com',
+  },
+  {
+    projectTitle: 'Box Shadow Generator',
+    projectImg: '/assets/img/pokedex.png',
+    techStack: 'JavaScript Vanilla',
+    projectDate: '12/2022',
+    gitHubHref: 'https://www.google.com',
+    projectHref: 'https://www.google.com',
+  },
+];

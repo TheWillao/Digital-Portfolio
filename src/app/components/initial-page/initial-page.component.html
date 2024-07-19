@@ -1,0 +1,55 @@
+<div class="bg-code">
+  <section
+    class="d-flex flex-column align-items-end justify-content-center h-50 pt-5 pe-5 gap-5 title-div"
+  >
+    <h1 class="fw-bold text-white shadowed-txt name me-5">
+      WILLY NARESSE LÚCIO
+    </h1>
+    <h3 class="fw-normal text-white job text-uppercase me-5">
+      {{ translations?.position }}
+    </h3>
+  </section>
+
+  <section class="w-100 h-50 d-flex justify-content-end pe-5 about-section">
+    <div class="about h-75 me-5 p-5 d-flex flex-column">
+      <div>
+        <strong>{{ translations?.aboutMe }}</strong>
+        <p>
+          {{ translations?.aboutMeInfo }}
+        </p>
+      </div>
+      <hr class="w-100" />
+      <div class="pt-3">
+        <strong>{{ translations?.professionalExperience }}</strong>
+        <p>
+          {{ translations?.professionalExperienceInfo }}
+        </p>
+      </div>
+      <hr class="w-100" />
+      <div class="pt-3">
+        <strong>{{ translations?.education }}</strong>
+        <p>
+          {{ translations?.educationInfo }}
+        </p>
+      </div>
+      <hr class="w-100" />
+      <div class="pt-3">
+        <strong>{{ translations?.skillsAndTechnologies }}</strong>
+        <ul>
+          <li *ngFor="let skill of translations?.skillsAndTechnologiesInfo">
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <img
+    title="Se eu estiver atrapalhando, clique na imagem e me envie para trás!"
+    src="../assets/img/bg-w.png"
+    alt="Imagem de fundo"
+    class="bg-willy"
+    (click)="sendBack = !sendBack"
+    [ngClass]="{ 'z-1': sendBack }"
+  />
+</div>

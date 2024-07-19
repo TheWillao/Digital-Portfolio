@@ -1,0 +1,67 @@
+.btn {
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+  span {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+  }
+  img {
+    width: 24px;
+    margin-right: 1rem;
+  }
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.github {
+  background-color: #000;
+  span {
+    img {
+      filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%)
+        hue-rotate(62deg) brightness(107%) contrast(100%);
+    }
+  }
+}
+.email {
+  background-color: #bb001b;
+  span {
+    img {
+      width: 30px;
+    }
+  }
+}
+.whatsapp {
+  background-color: #4fce5d;
+  text-shadow: 1px 1px 1px #435a64;
+}
+
+@media screen and (max-width: 500px) {
+  .btn {
+    span {
+      width: 75% !important;
+      padding-left: 1%;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .btn {
+    span {
+      width: 100% !important;
+      font-size: 14px;
+    }
+  }
+  .btns {
+    padding: 0 1rem !important;
+  }
+}

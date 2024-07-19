@@ -1,0 +1,32 @@
+{
+  "position": "DESENVOLVEDOR FRONT-END",
+  "aboutTab": "Sobre",
+  "projectsTab": "Projetos",
+  "contact": "Contato",
+  "aboutMe": "Sobre: ",
+  "aboutMeInfo": "Sou um entusiástico Desenvolvedor Front-End especialista em Angular. Me vejo como um indivíduo proativo, leal, comunicativo, focado e bastante ambicioso. Possuo experiência sólida na criação de interfaces Web dinâmicas e responsivas, e estou sempre em busca de conhecimentos e aprendizados que me permitam expandir minhas capacidades.",
+  "professionalExperience": "Experiência Profissional: ",
+  "professionalExperienceInfo": "Desenvolvedor Front-End especialista em Angular na Empresa AMG - Angular Money Group (Outubro/2023 - Agosto/2024).",
+  "education": "Formação: ",
+  "educationInfo": "Graduação em Bacharelado em Sistemas de Informação na UFU - Universidade Federal de Uberlândia (Dezembro/2023 - Dezembro/2027).",
+  "skillsAndTechnologies": "Qualificação e Tecnologias: ",
+  "skillsAndTechnologiesInfo": [
+    "Inglês Avançado/Fluente",
+    "HTML5 e CSS3",
+    "JavaScript e TypeScript",
+    "Framework Angular",
+    "Framework React",
+    "Bibliotecas JavaScript/TypeScript (Bootstrap, Material UI, etc.)",
+    "Controle de Versionamento (Git)",
+    "Metodologia SCRUM",
+    "Consumo de APIs RESTful",
+    "Testes Unitários (Jasmine e Karma)",
+    "Design de UI/UX (Figma)"
+  ],
+  "project": "Projeto",
+  "technology": "Tecnologia",
+  "goToGitHub": "Ir para GitHub",
+  "goToProject": "Visualizar Projeto",
+  "contactsAndNetworks": "Contatos e Redes",
+  "whatsAppMessage": "Olá, eu vi o seu Portfólio Digital e estou interessado em seus projetos. Podemos discutir a respeito?"
+}

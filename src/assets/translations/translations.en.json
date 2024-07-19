@@ -1,0 +1,32 @@
+{
+  "position": "FRONT-END DEVELOPER",
+  "aboutTab": "About",
+  "projectsTab": "Projects",
+  "contact": "Contact",
+  "aboutMe": "About me: ",
+  "aboutMeInfo": "I am an enthusiastic Front-End Developer specializing in Angular. I see myself as a proactive, loyal, communicative, focused, and highly ambitious individual. I have a strong background in creating dynamic and responsive web interfaces, and I am always seeking knowledge and learning opportunities to expand my capabilities.",
+  "professionalExperience": "Professional Experiences: ",
+  "professionalExperienceInfo": "Front-End Developer specializing in Angular at AMG - Angular Money Group (October 2023 - August 2024).",
+  "education": "Education: ",
+  "educationInfo": "Bachelor's Degree in Information Systems at UFU - Federal University of Uberlândia (December 2023 - December 2027).",
+  "skillsAndTechnologies": "Skills and Technologies: ",
+  "skillsAndTechnologiesInfo": [
+    "Advanced/Fluent English",
+    "HTML5 and CSS3",
+    "JavaScript and TypeScript",
+    "Angular Framework",
+    "React Framework",
+    "JavaScript/TypeScript Libraries (Bootstrap, Material UI, etc.)",
+    "Version Control (Git)",
+    "SCRUM Methodology",
+    "Consumption of RESTful APIs",
+    "Unit Testing (Jasmine and Karma)",
+    "UI/UX Design (Figma)"
+  ],
+  "project": "Project",
+  "technology": "Technology",
+  "goToGitHub": "Go To GitHub",
+  "goToProject": "View Project",
+  "contactsAndNetworks": "My Contacts",
+  "whatsAppMessage": "Hello, I have seen your Digital Portfolio and I am interested in your projects. Can we discuss?"
+}

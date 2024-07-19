@@ -1,0 +1,57 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient px-5 justify-content-between"
+>
+  <img
+    class="w-logo"
+    src="../assets/img/W-logo.png"
+    (click)="navigateTo('about')"
+  />
+
+  <div
+    class="collapse navbar-collapse justify-content-end"
+    id="navbarSupportedContent"
+    *ngIf="!isMobile"
+  >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item me-3">
+        <select class="form-select" (change)="changeLanguage($event)">
+          <option selected value="pt">Português</option>
+          <option value="en">English</option>
+        </select>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-uppercase"
+          [ngClass]="{ 'active-option': currentPage == 'about' }"
+          (click)="navigateTo('about')"
+          >{{ translations?.aboutTab }}</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-uppercase"
+          [ngClass]="{ 'active-option': currentPage == 'projects' }"
+          (click)="navigateTo('projects')"
+          >{{ translations?.projectsTab }}</a
+        >
+      </li>
+    </ul>
+
+    <button
+      class="btn btn-primary ms-3 text-uppercase"
+      type="button"
+      (click)="openContactsModal()"
+    >
+      {{ translations?.contact }}
+    </button>
+  </div>
+
+  <div class="d-flex justify-content-end align-items-center" *ngIf="isMobile">
+    <mat-icon
+      class="cursor-pointer text-white menu-icon"
+      aria-hidden="false"
+      fontIcon="menu"
+      (click)="openMenu.emit()"
+    ></mat-icon>
+  </div>
+</nav>

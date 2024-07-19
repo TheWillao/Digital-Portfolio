@@ -1,0 +1,7 @@
+<div class="bg-code p-5 d-flex gap-4 flex-wrap overflow-auto">
+  <app-project-card
+    *ngFor="let project of myProjects"
+    [project]="project"
+    [translations]="translations"
+  ></app-project-card>
+</div>
