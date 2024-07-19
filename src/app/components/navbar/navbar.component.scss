@@ -4,26 +4,39 @@
   transition: 0.3s;
   &:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: rgba(255, 255, 255, 0.11);
     border-radius: 100%;
   }
 }
 
 .navbar {
   width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 10;
+  background-color: #161616 !important;
+}
+
+.gradient-line {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #034078 0%,
+    #1282a2 50%,
+    #09b06d 65%,
+    #1ad587 77%,
+    #afef6e 100%
+  );
 }
 
 .active-option {
-  border-bottom: 2px solid #334d6e;
-  color: white;
+  border-bottom: 2px solid #1282a2;
+  color: white !important;
   transition: 0.3s;
 }
 
 .nav-item {
   cursor: pointer;
+  .nav-link {
+    color: #fefcfb8a;
+  }
 }
 
 .menu-icon {
