@@ -10,9 +10,30 @@
       </select>
       <a
         class="nav-link text-uppercase w-75 ms-5 mt-2 ps-3 py-3"
-        (click)="currentPage = 'about'; drawer.close()"
+        (click)="scrollToSection('about'); drawer.close()"
         ><span [ngClass]="{ 'active-option': currentPage == 'about' }">{{
           translations?.aboutTab
+        }}</span></a
+      >
+      <a
+        class="nav-link text-uppercase w-75 ms-5 mt-2 ps-3 py-3"
+        (click)="scrollToSection('exp'); drawer.close()"
+        ><span [ngClass]="{ 'active-option': currentPage == 'exp' }">{{
+          translations?.professionalExperience
+        }}</span></a
+      >
+      <a
+        class="nav-link text-uppercase w-75 ms-5 mt-2 ps-3 py-3"
+        (click)="scrollToSection('education'); drawer.close()"
+        ><span [ngClass]="{ 'active-option': currentPage == 'education' }">{{
+          translations?.education
+        }}</span></a
+      >
+      <a
+        class="nav-link text-uppercase w-75 ms-5 mt-2 ps-3 py-3"
+        (click)="scrollToSection('tech'); drawer.close()"
+        ><span [ngClass]="{ 'active-option': currentPage == 'tech' }">{{
+          translations?.skillsAndTechnologies
         }}</span></a
       >
       <a
@@ -35,13 +56,13 @@
     <app-navbar
       (pageEmitter)="onPageChange($event)"
       (emitLanguage)="changeLanguage($event)"
-      (openMenu)="drawer.toggle()"
+      (openMenu)="drawer.open()"
       [translations]="translations"
     ></app-navbar>
 
     <app-initial-page
       [translations]="translations"
-      *ngIf="currentPage === 'about'"
+      *ngIf="currentPage !== 'projects'"
     ></app-initial-page>
 
     <app-my-projects

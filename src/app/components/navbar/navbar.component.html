@@ -23,7 +23,35 @@
             class="nav-link text-uppercase"
             [ngClass]="{ 'active-option': currentPage == 'about' }"
             (click)="navigateTo('about')"
+            href="#about"
             >{{ translations?.aboutTab }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-uppercase"
+            [ngClass]="{ 'active-option': currentPage == 'exp' }"
+            (click)="navigateTo('exp')"
+            href="#exp"
+            >{{ translations?.professionalExperience }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-uppercase"
+            [ngClass]="{ 'active-option': currentPage == 'education' }"
+            (click)="navigateTo('education')"
+            href="#education"
+            >{{ translations?.education }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-uppercase"
+            [ngClass]="{ 'active-option': currentPage == 'tech' }"
+            (click)="navigateTo('tech')"
+            href="#tech"
+            >{{ translations?.skillsAndTechnologies }}</a
           >
         </li>
         <li class="nav-item">

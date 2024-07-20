@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-initial-page',
@@ -9,7 +10,21 @@ export class InitialPageComponent implements OnInit {
   @Input() translations: any;
   sendBack: boolean = false;
 
-  constructor() {}
+  constructor(
+    private scrollService: ScrollService,
+    private elementRef: ElementRef
+  ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.checkScroll();
+  }
+
+  checkScroll() {
+    this.scrollService.getScrollObservable().subscribe((id) => {
+      const section = this.elementRef.nativeElement.querySelector(`#${id}`);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }

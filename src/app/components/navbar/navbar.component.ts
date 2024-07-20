@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  HostListener,
+  Input,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { ContactsComponent } from '../contacts/contacts.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -18,6 +25,29 @@ export class NavbarComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {}
 
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition >= this.getOffsetTop('tech')) {
+      this.currentPage = 'tech';
+    } else if (scrollPosition >= this.getOffsetTop('education')) {
+      this.currentPage = 'education';
+    } else if (scrollPosition >= this.getOffsetTop('exp')) {
+      this.currentPage = 'exp';
+    } else {
+      this.currentPage = 'about';
+    }
+  }
+
+  private getOffsetTop(id: string): number {
+    const element = document.getElementById(id);
+    if (element) {
+      return element.offsetTop - 200;
+    }
+    return 0;
+  }
+
   ngOnInit() {}
 
   openContactsModal() {
@@ -34,7 +64,14 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(route: string) {
-    this.currentPage = route;
+    if (route === 'projects') {
+      this.currentPage = route;
+      setTimeout(() => {
+        this.currentPage = route;
+      });
+    } else {
+      this.currentPage = route;
+    }
     this.pageEmitter.emit(route);
   }
 }
