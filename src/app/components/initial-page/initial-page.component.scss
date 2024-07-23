@@ -1,3 +1,18 @@
+.bg-mobile-1 {
+  background-color: #fefcfb;
+  color: #001f54;
+  min-height: calc(100vh - 112px);
+}
+.bg-mobile-2 {
+  background-color: #001f54;
+  color: #fefcfb;
+  min-height: calc(100vh - 100px);
+}
+
+.info-mobile {
+  text-align: justify;
+}
+
 .bg-w-1 {
   width: 700px;
 }
@@ -32,6 +47,20 @@
     &:hover {
       transform: scale(1.05);
     }
+  }
+}
+
+.logos-mobile {
+  margin-bottom: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 60px;
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg)
+      brightness(106%) contrast(106%);
   }
 }
 
@@ -133,15 +162,6 @@
   .bg-w-2,
   .bg-w-3 {
     width: 500px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .bg-w-3 {
-    width: 400px;
-  }
-  .bg-w-1 {
-    width: 400px;
   }
 }
 
