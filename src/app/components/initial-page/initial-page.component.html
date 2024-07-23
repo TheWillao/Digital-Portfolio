@@ -1,106 +1,228 @@
-<div
-  class="bg-code d-flex justify-content-between position-relative"
-  id="about"
->
-  <div class="form-1 position-absolute h-100 w-100 bg-indigo"></div>
-  <section class="h-100 d-flex align-items-end img-div-1">
-    <img
-      src="../assets/img/bg-w.png"
-      alt="Imagem de fundo 1"
-      class="bg-w-1 bg-w"
-    />
-  </section>
-  <section
-    class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-between align-items-end title-div-1"
+<div *ngIf="!isMobile">
+  <div
+    class="bg-code d-flex justify-content-between position-relative"
+    id="about"
   >
-    <div class="d-flex flex-column gap-5">
-      <h1 class="fw-bold name">WILLY NARESSE LÚCIO</h1>
-      <h3 class="job text-uppercase">
-        {{ translations?.position }}
-      </h3>
-    </div>
+    <div class="form-1 position-absolute h-100 w-100 bg-indigo"></div>
+    <section class="h-100 d-flex align-items-end img-div-1">
+      <img
+        src="../assets/img/bg-w.png"
+        alt="Imagem de fundo 1"
+        class="bg-w-1 bg-w"
+      />
+    </section>
+    <section
+      class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-between align-items-end title-div-1"
+    >
+      <div class="d-flex flex-column gap-5">
+        <h1 class="fw-bold name">WILLY NARESSE LÚCIO</h1>
+        <h3 class="job text-uppercase">
+          {{ translations?.position }}
+        </h3>
+      </div>
 
-    <div class="info-div-1 info-div d-flex flex-column gap-4">
-      <strong class="text-uppercase">{{ translations?.aboutMe }}</strong>
-      <p>
-        {{ translations?.aboutMeInfo }}
-      </p>
-    </div>
-  </section>
+      <div class="info-div-1 info-div d-flex flex-column gap-4">
+        <strong class="text-uppercase">{{ translations?.aboutMe }}</strong>
+        <p>
+          {{ translations?.aboutMeInfo }}
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="bg-code d-flex justify-content-between position-relative"
+    id="exp"
+  >
+    <div class="form-2 position-absolute h-100 w-100 bg-indigo"></div>
+    <section
+      class="h-100 title-div ms-5 ps-5 d-flex flex-column justify-content-between"
+    >
+      <div class="info-div info-div-2 d-flex flex-column gap-4">
+        <strong class="text-uppercase">{{
+          translations?.professionalExperience
+        }}</strong>
+        <p>
+          {{ translations?.professionalExperienceInfo }}
+        </p>
+      </div>
+    </section>
+    <section class="h-100 d-flex align-items-end">
+      <img
+        src="../assets/img/bg-w-2.png"
+        alt="Imagem de fundo"
+        class="bg-w bg-w-2"
+      />
+    </section>
+  </div>
+
+  <div
+    class="bg-code d-flex justify-content-between position-relative"
+    style="background-color: #001f54"
+    id="education"
+  >
+    <div class="form-3 position-absolute h-100 w-100 bg-indigo"></div>
+    <section class="h-100 d-flex align-items-center ps-5">
+      <img
+        src="../assets/img/ufu-bg.png"
+        alt="Imagem de fundo"
+        class="bg-w-3 bg-w"
+      />
+    </section>
+    <section
+      class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-center align-items-end"
+    >
+      <div class="info-div info-div-1 d-flex flex-column gap-4">
+        <strong class="text-uppercase">{{ translations?.education }}</strong>
+        <p>
+          {{ translations?.educationInfo }}
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="bg-code d-flex justify-content-between position-relative"
+    id="tech"
+  >
+    <div class="form-4 position-absolute h-100 w-100 bg-indigo"></div>
+    <section
+      class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-between align-items-end"
+    >
+      <div class="info-div info-div-2 info-div-3 d-flex flex-column gap-4">
+        <strong class="text-uppercase">{{
+          translations?.skillsAndTechnologies
+        }}</strong>
+        <ul>
+          <li *ngFor="let skill of translations?.skillsAndTechnologiesInfo">
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="h-100 d-flex align-items-end logos">
+      <div class="bg-w-4">
+        <img src="../../../assets/img/html-logo.png" alt="Logo do HTML" />
+        <img src="../../../assets/img/css-logo.png" alt="Logo do CSS" />
+        <img src="../../../assets/img/js-logo.png" alt="Logo do JavaScript" />
+        <img src="../../../assets/img/ts-logo.png" alt="Logo do TypeScript" />
+        <img src="../../../assets/img/react-logo.png" alt="Logo do React" />
+        <img src="../../../assets/img/ang-icon.webp" alt="Logo do Angular" />
+      </div>
+    </section>
+  </div>
 </div>
 
-<div class="bg-code d-flex justify-content-between position-relative" id="exp">
-  <div class="form-2 position-absolute h-100 w-100 bg-indigo"></div>
-  <section
-    class="h-100 title-div ms-5 ps-5 d-flex flex-column justify-content-between"
+<div *ngIf="isMobile">
+  <div
+    class="bg-mobile-1 d-flex flex-column justify-content-between position-relative"
+    id="about"
   >
-    <div class="info-div info-div-2 d-flex flex-column gap-4">
-      <strong class="text-uppercase">{{
-        translations?.professionalExperience
-      }}</strong>
-      <p>
-        {{ translations?.professionalExperienceInfo }}
-      </p>
-    </div>
-  </section>
-  <section class="h-100 d-flex align-items-end">
-    <img
-      src="../assets/img/bg-w-2.png"
-      alt="Imagem de fundo"
-      class="bg-w bg-w-2"
-    />
-  </section>
-</div>
+    <section class="d-flex align-items-end img-div-1">
+      <img
+        src="../assets/img/bg-w.png"
+        alt="Imagem de fundo 1"
+        class="bg-w"
+        style="width: 85%"
+      />
+    </section>
+    <section
+      class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-center align-items-center title-div-1"
+    >
+      <div class="d-flex flex-column gap-5 mt-3">
+        <h1 class="fw-bold name">WILLY NARESSE LÚCIO</h1>
+        <h3 class="job text-uppercase">
+          {{ translations?.position }}
+        </h3>
+      </div>
 
-<div
-  class="bg-code d-flex justify-content-between position-relative"
-  style="background-color: #001f54"
-  id="education"
->
-  <div class="form-3 position-absolute h-100 w-100 bg-indigo"></div>
-  <section class="h-100 d-flex align-items-center ps-5">
-    <img
-      src="../assets/img/ufu-bg.png"
-      alt="Imagem de fundo"
-      class="bg-w-3 bg-w"
-    />
-  </section>
-  <section
-    class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-center align-items-end"
-  >
-    <div class="info-div info-div-1 d-flex flex-column gap-4">
-      <strong class="text-uppercase">{{ translations?.education }}</strong>
-      <p>
-        {{ translations?.educationInfo }}
-      </p>
-    </div>
-  </section>
-</div>
+      <div class="d-flex flex-column gap-4 px-3 mt-5 info-mobile">
+        <strong class="text-uppercase text-center">{{
+          translations?.aboutMe
+        }}</strong>
+        <p>
+          {{ translations?.aboutMeInfo }}
+        </p>
+      </div>
+    </section>
+  </div>
 
-<div class="bg-code d-flex justify-content-between position-relative" id="tech">
-  <div class="form-4 position-absolute h-100 w-100 bg-indigo"></div>
-  <section
-    class="h-100 title-div me-5 pe-5 d-flex flex-column justify-content-between align-items-end"
+  <div
+    class="bg-mobile-2 d-flex flex-column justify-content-between position-relative"
+    id="exp"
   >
-    <div class="info-div info-div-2 info-div-3 d-flex flex-column gap-4">
-      <strong class="text-uppercase">{{
-        translations?.skillsAndTechnologies
-      }}</strong>
-      <ul>
-        <li *ngFor="let skill of translations?.skillsAndTechnologiesInfo">
-          {{ skill }}
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="h-100 d-flex align-items-end logos">
-    <div class="bg-w-4">
-      <img src="../../../assets/img/html-logo.png" alt="Logo do HTML" />
-      <img src="../../../assets/img/css-logo.png" alt="Logo do CSS" />
-      <img src="../../../assets/img/js-logo.png" alt="Logo do JavaScript" />
-      <img src="../../../assets/img/ts-logo.png" alt="Logo do TypeScript" />
-      <img src="../../../assets/img/react-logo.png" alt="Logo do React" />
-      <img src="../../../assets/img/ang-icon.webp" alt="Logo do Angular" />
-    </div>
-  </section>
+    <section
+      class="h-100 title-div ms-5 ps-5 d-flex flex-column justify-content-between"
+    >
+      <div class="d-flex flex-column gap-4 px-3 info-mobile">
+        <strong class="text-uppercase text-center">{{
+          translations?.professionalExperience
+        }}</strong>
+        <p>
+          {{ translations?.professionalExperienceInfo }}
+        </p>
+      </div>
+    </section>
+    <section class="d-flex justify-content-center">
+      <img
+        src="../assets/img/bg-w-2.png"
+        alt="Imagem de fundo"
+        class="bg-w"
+        style="width: 80%"
+      />
+    </section>
+  </div>
+
+  <div
+    class="bg-mobile-1 d-flex flex-column justify-content-between position-relative"
+    id="education"
+  >
+    <section class="h-100 d-flex align-items-center ps-5 pt-5 mt-5">
+      <img
+        src="../assets/img/ufu-bg.png"
+        alt="Imagem de fundo"
+        style="width: 90%"
+      />
+    </section>
+    <section
+      class="h-100 title-div ms-5 ps-5 d-flex flex-column justify-content-between"
+    >
+      <div class="info-mobile d-flex flex-column gap-4 mb-5 pb-5">
+        <strong class="text-uppercase text-center">{{
+          translations?.education
+        }}</strong>
+        <p>
+          {{ translations?.educationInfo }}
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div
+    class="bg-mobile-2 d-flex flex-column justify-content-between align-items-center position-relative"
+    id="tech"
+  >
+    <section class="h-100 title-div me-5 pe-5 d-flex flex-column">
+      <div class="d-flex flex-column gap-4 mb-5 pb-5 px-2 text-start">
+        <strong class="text-uppercase text-center">{{
+          translations?.skillsAndTechnologies
+        }}</strong>
+        <ul>
+          <li *ngFor="let skill of translations?.skillsAndTechnologiesInfo">
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="h-100 d-flex align-items-end">
+      <div class="logos-mobile px-4">
+        <img src="../../../assets/img/html-logo.png" alt="Logo do HTML" />
+        <img src="../../../assets/img/css-logo.png" alt="Logo do CSS" />
+        <img src="../../../assets/img/js-logo.png" alt="Logo do JavaScript" />
+        <img src="../../../assets/img/ts-logo.png" alt="Logo do TypeScript" />
+        <img src="../../../assets/img/react-logo.png" alt="Logo do React" />
+        <img src="../../../assets/img/ang-icon.webp" alt="Logo do Angular" />
+      </div>
+    </section>
+  </div>
 </div>

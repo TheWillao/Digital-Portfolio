@@ -8,6 +8,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
 })
 export class InitialPageComponent implements OnInit {
   @Input() translations: any;
+  isMobile: boolean = window.innerWidth <= 525;
   sendBack: boolean = false;
 
   constructor(
