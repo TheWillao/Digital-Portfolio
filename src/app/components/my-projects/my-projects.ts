@@ -23,4 +23,12 @@ export const myProjects = [
     gitHubHref: 'https://github.com/TheWillao/ProjectCommentsSection',
     projectHref: 'https://w-projectcommentsection.netlify.app/',
   },
+  {
+    projectTitle: 'Stock Manager',
+    projectImg: '/assets/img/stockmanager.png',
+    techStack: 'ReactJS',
+    projectDate: '08/2024',
+    gitHubHref: 'https://github.com/TheWillao/ProjectStockManager',
+    projectHref: 'https://w-projectstockmanager.netlify.app/',
+  },
 ];
